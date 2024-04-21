@@ -1,3 +1,4 @@
+// @import '../variables';
 * {
   box-sizing: border-box;
 }
@@ -11,8 +12,8 @@ body {
   font-family: $font-family-sans-serif;
   font-size: 16px;
   line-height: 24px;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
+  background-color: map-get($theme-colors, light );
+  color: map-get($theme-colors, primary );
 }
 
 .uoc-container {
