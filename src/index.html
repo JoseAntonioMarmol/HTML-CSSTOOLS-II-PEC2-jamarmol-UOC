@@ -10,10 +10,16 @@
             href="./assets/styles/main.scss"
         />
         <!-- do not remove this line! -->
-        <title>PEC2</title>
+        <title>PEC2 - Enchanting Kitchen</title>
+        <link
+            rel="icon"
+            type="image/png"
+            href="./assets/images/CatalanCookinglogoCompress.png?width=16"
+        />
     </head>
     <body>
-        <div class="grid">
+        <include src="./views/header.html"></include>
+        <!-- <div class="grid">
             <picture>
                 <source
                     srcset="./assets/images/logo.png?as=webp&width=350"
@@ -25,14 +31,21 @@
                     class="grid__main-image"
                 />
             </picture>
-            <h1 class="grid__title">Hello, UOC!</h1>
-            <p class="grid__item">
+            <h1 class="grid__title text-info">Hello, UOC!</h1>
+            <p class="grid__item text-primary">
                 This is a starter template for the Advanced HTML and CSS Tools
                 courses from the Master's Program in Multimedia Applications and
                 the Master's Program in Web App and Website Development at the
                 Universitat Oberta de Catalunya.
             </p>
-        </div>
+        </div> -->
+        <main class="container">
+            <picture> </picture>
+            <!-- <include src="./views/homepage.html"></include>
+            <include src="./views/chefs.html"></include>
+            <include src="./views/about.html"></include>
+            <include src="./views/contact.html"></include> -->
+        </main>
         <include src="./views/footer.html"></include>
         <script type="module" src="./assets/scripts/main.js"></script>
         <!-- do not remove this line! -->
