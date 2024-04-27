@@ -19,26 +19,6 @@
     </head>
     <body>
         <include src="./views/header.html"></include>
-        <!-- <div class="grid">
-            <picture>
-                <source
-                    srcset="./assets/images/logo.png?as=webp&width=350"
-                    type="image/webp"
-                />
-                <img
-                    src="./assets/images/logo.png?width=350"
-                    alt="Universitat Oberta de Catalunya"
-                    class="grid__main-image"
-                />
-            </picture>
-            <h1 class="grid__title text-info">Hello, UOC!</h1>
-            <p class="grid__item text-primary">
-                This is a starter template for the Advanced HTML and CSS Tools
-                courses from the Master's Program in Multimedia Applications and
-                the Master's Program in Web App and Website Development at the
-                Universitat Oberta de Catalunya.
-            </p>
-        </div> -->
         <main class="container">
             <div class="home page" id="home">
                 <picture>
@@ -46,18 +26,18 @@
                         type="image/webp"
                         srcset="
                             ./assets/images/chef-4021815_1920.jpg?as=webp&width=400,
-                            ./assets/images/chef-4021815_1920.jpg?as=webp&width=800 2x
+                            ./assets/images/chef-4021815_1920.jpg?as=webp&width=600 2x
                         "
                     />
                     <source
                         type="image/jpeg"
                         srcset="
                             ./assets/images/chef-4021815_1920.jpg?width=400,
-                            ./assets/images/chef-4021815_1920.jpg?width=800 2x
+                            ./assets/images/chef-4021815_1920.jpg?width=600 2x
                         "
                     />
                     <img
-                        src="./assets/images/chef-4021815_1920.jpg?width=400"
+                        src="./assets/images/chef-4021815_1920.jpg?width=600"
                         alt="Image 2"
                         class="home__image"
                     />
@@ -90,7 +70,9 @@
                     justo dolores dolores ea facilisi justo rebum accusam augue
                     blandit diam duo amet iusto sit.
                 </p>
-                <a href="#" class="home__link home__link--form"
+                <a
+                    href="./views/contact.html"
+                    class="home__link home__link--form"
                     ><i class="fa-solid fa-sign-in"></i> Sign in here
                 </a>
                 <br />
@@ -98,12 +80,13 @@
                     >About us <i class="fas fa-info-circle"></i
                 ></a>
                 <br />
+                <p class="home__text">
+                    <i class="fa-solid fa-mobile-phone">Phone: 123-456-7890</i
+                    ><br /><i class="fa-solid fa-envelope"
+                        >Contact: contact@example.com</i
+                    >
+                </p>
             </div>
-
-            <!-- <include src="./views/homepage.html"></include>
-            <include src="./views/chefs.html"></include>
-            <include src="./views/about.html"></include>
-            <include src="./views/contact.html"></include> -->
         </main>
         <include src="./views/footer.html"></include>
         <script type="module" src="./assets/scripts/main.js"></script>
