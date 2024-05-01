@@ -47,6 +47,7 @@ footer { min-height: 30vh; }
 
   &__subtitle {
     margin-bottom: 1em;
+    font-family: $font-family-sans-serif;
     font-size: calc(1em + 0.5vw);
     color: map-get($theme-colors, secondary );
     text-transform: uppercase;
@@ -56,6 +57,7 @@ footer { min-height: 30vh; }
     margin-block: 1rem;
     padding-inline: 1rem;
     padding-block: 1rem;
+    font-family: $font-family-sans-serif;
     color: map-get($theme-colors, light );
     background: map-get($theme-colors, secondary );
   }
