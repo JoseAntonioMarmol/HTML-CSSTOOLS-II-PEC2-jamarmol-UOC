@@ -20,7 +20,7 @@ body {
 
 header { min-height: 10vh; }
 main   { min-height: 60vh; }
-footer { min-height: 30vh; }
+footer { min-height:  20vh; }
 
 
 .home {
@@ -60,6 +60,7 @@ footer { min-height: 30vh; }
     font-family: $font-family-sans-serif;
     color: map-get($theme-colors, light );
     background: map-get($theme-colors, secondary );
+    border-radius: 2vw;
   }
 
   &__text {

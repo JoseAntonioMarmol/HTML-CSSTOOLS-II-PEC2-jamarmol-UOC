@@ -1,0 +1,110 @@
+.footer {
+    container: footer / size;
+    padding-top: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 30vh;
+    color: map-get($theme-colors , secondary );
+
+    &__spacer {
+      margin-inline: 25cqi;
+      width: 50cqi;
+    }
+
+
+    &__container {
+      container: container / size;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      min-height: 50cqb;
+
+    //   &--uoc {
+    //     justify-content: space-between;
+    //     color: #fff;
+    //     background-color: $uoc-corporate;
+    //   }
+
+    //   &:first-child { justify-content: center; }
+    }
+
+    &__column {
+      margin-inline: 3cqw;
+
+      &:has(.footer__logo){
+        margin-inline: 2cqw;
+        width: 30cqi;
+      }
+
+    //   &:has(.footer__imatge) {
+    //     margin-inline: 2cqw;
+    //     width: 30cqi;
+    //   }
+
+    //   &:has(.footer__credits) {
+    //     margin-right: 3cqw;
+    //     margin-left: 0;
+    //     width: 70cqi;
+    //   }
+    }
+
+    &__list {
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      list-style: none;
+    }
+
+    &__link {
+      font-weight: bold;
+      color: map-get($theme-colors , secondary );
+      text-decoration: none;
+
+      &:hover { color: map-get($theme-colors , tertiary ); }
+    }
+
+    &__logo {
+      width: 60px;
+      height: 60px;
+    }
+
+    // &__imatge {
+    //   width: 20cqw;
+    //   height: 100%;
+    //   object-fit: contain;
+    // }
+
+    // &__credits {
+    //   font-weight: bold;
+    //   font-size: 0.7em;
+    //   line-height: 1em;
+    //   text-align: justify;
+    // }
+  }
+
+  @container footer (min-width: 994px) {
+    .footer__list { gap: 10cqw; }
+  }
+
+  @container footer (max-width: 993px) and (min-width: 738px) {
+    .footer__column { padding-block: 1cqh; }
+    .footer__list  { gap: 5cqw; }
+  }
+
+  @container footer (max-width: 737px) {
+    .footer__list {
+      gap: 1cqw;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+//   @container container (max-height: 125px) {
+//     .footer__imatge {
+//       margin-block-end: 15cqb;
+//       width: 15cqw;
+//     }
+//   }
