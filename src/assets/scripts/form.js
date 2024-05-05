@@ -27,6 +27,7 @@ $(function () {
         fail.fadeIn();
         setTimeout(function () {
           fail.fadeOut();
+          console.log(error);
         }, 5000);
         form.trigger("reset");
       });
