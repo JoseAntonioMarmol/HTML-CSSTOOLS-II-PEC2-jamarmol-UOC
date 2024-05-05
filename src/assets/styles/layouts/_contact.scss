@@ -1,0 +1,60 @@
+@layer base {
+    .contact {
+      container: contact / inline-size;
+
+      &__container {
+        container: container_contact / inline-size;
+        margin-inline: 0;
+        display: flex;
+        justify-content: space-around;
+        width: 75vw;
+        gap: 5cqi;
+      }
+    }
+
+    @container contact (max-width: 993px) {
+      .contact__container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
+  @layer components {
+    .contact {
+      &__form {
+        margin-inline: 0;
+        margin-block: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 50cqh;
+      }
+    }
+
+    @container container_contact (min-width: 994px) {
+      div:is(.contact__form) { width: 50cqw; }
+    }
+
+    @container container_contact (max-width: 993px) and (min-width: 738px) {
+      div:is(.contact__form) {
+        width: 50cqw;
+        min-height: cqmin;
+      }
+    }
+
+    @container container_contact (max-width: 737px) {
+      div:is(.contact__form) {
+        justify-content: center;
+        width: 100cqw;
+        height: cqmin;
+      }
+    }
+  }
+
+  @layer design {
+    .contact {
+      color: map-get($theme-colors, tertiary ) !important;
+      background-color: map-get($theme-colors, primary ) !important;
+    }
+  }

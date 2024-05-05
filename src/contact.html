@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="./assets/styles/main.scss"
+        />
+        <!-- do not remove this line! -->
+        <title>PEC2 - Enchanting Kitchen</title>
+        <link
+            rel="icon"
+            type="image/png"
+            href="./assets/images/CatalanCookinglogoCompress.png?width=16"
+        />
+    </head>
+    <body>
+        <include src="./views/header.html"></include>
+        <main class="container">
+            <div class="contact page" id="contact">
+                <div class="contact__container mt-3">
+                    <div class="contact__from">
+                        <h1 class="contact__title">Join Us!</h1>
+                        <form
+                            class="form"
+                            name="contact__form"
+                            method="post"
+                            netlify
+                        >
+                            <div class="form__box mb-3">
+                                <label class="form-label" for="form__name"
+                                    >Name</label
+                                >
+                                <input
+                                    class="form-control"
+                                    id="form__name"
+                                    type="ematextil"
+                                    required
+                                />
+                            </div>
+
+                            <div class="form__box mb-3">
+                                <label class="form-label" for="form__mail"
+                                    >E-mail</label
+                                >
+                                <input
+                                    class="form-control"
+                                    id="form__mail"
+                                    type="email"
+                                    placeholder="joinus@enchantingkitchen.com"
+                                    required
+                                />
+                            </div>
+                            <div class="form__box mb-3">
+                                <label class="form-label" for="form__select"
+                                    >I want information about</label
+                                >
+                                <select
+                                    class="form-select"
+                                    id="form__select"
+                                    aria-label="Check one or more choices"
+                                    multiple
+                                    size="5"
+                                >
+                                    <option selected disabled>
+                                        Check one or more choices
+                                    </option>
+                                    <option value="1">Contests</option>
+                                    <option value="2">Courses</option>
+                                    <option value="3">Workshops</option>
+                                    <option value="4">Extra Activities</option>
+                                    <option value="5">Other</option>
+                                </select>
+                            </div>
+                            <div class="form__box mb-3">
+                                <label class="form-label" for="form__text"
+                                    >Message</label
+                                >
+                                <textarea
+                                    class="form-control"
+                                    id="form__text"
+                                    rows="3"
+                                ></textarea>
+                            </div>
+                            <div class="form__box form-check mb-3">
+                                <input
+                                    class="form-check-input"
+                                    id="check__info"
+                                    type="checkbox"
+                                    value="1"
+                                    checked
+                                />
+                                <label
+                                    class="form-check-label"
+                                    for="check__info"
+                                >
+                                    We'd love for you to subscribe and stay up
+                                    to date with all the latest news!
+                                </label>
+                            </div>
+                            <button
+                                class="form__button btn btn-outline-info mb-3"
+                                type="submit"
+                            >
+                                Submit
+                            </button>
+                            <div
+                                class="form__alert form__alert--success alert alert-success"
+                                role="alert"
+                            >
+                                Thanks for getting in touch. We'll get back to
+                                you as soon as we can.
+                            </div>
+                            <div
+                                class="form__alert form__alert--fail alert alert-danger"
+                                role="alert"
+                            >
+                                I'm really sorry, but something has gone wrong.
+                                Please try sending it again, and I'll do my best
+                                to get it to you as soon as I can.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <include src="./views/footer.html"></include>
+        <script type="module" src="./assets/scripts/main.js"></script>
+        <script type="module" src="./assets/scripts/form.js"></script>
+        <!-- do not remove this line! -->
+    </body>
+</html>
