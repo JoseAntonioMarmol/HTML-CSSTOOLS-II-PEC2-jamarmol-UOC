@@ -1,0 +1,58 @@
+@layer base {
+ .chefs {
+        // display: none;
+
+      &__container {
+        container: chefs / inline-size;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2cqi;
+        justify-content: center;
+        width: calc(100% - 30px);
+      }
+    }
+}
+
+@layer components {
+    .chefs {
+      margin-inline: 1rem;
+      margin-block: 0.5rem;
+    }
+
+    @container chefs (min-width: 994px) {
+      .chef {
+        flex-basis: 30cqw;
+      }
+    }
+
+    @container chefs (min-width: 738px) and (max-width: 993px) {
+      .chef {
+        flex-basis: 40cqw;
+      }
+    }
+
+    @container chefs (max-width: 737px) {
+      .chef {
+        flex-basis: 100cqw;
+      }
+    }
+}
+
+@layer design {
+    .chefs {
+      &__title {
+        font-size: calc(1em + 2vw);
+        text-align: center;
+      }
+      &__subtitle {
+        font-size: calc(0.5em + 1vw);
+        text-align: center;
+      }
+    }
+
+    .chef {
+      &__description {
+        margin-block: 0.5rem !important;
+      }
+    }
+}
