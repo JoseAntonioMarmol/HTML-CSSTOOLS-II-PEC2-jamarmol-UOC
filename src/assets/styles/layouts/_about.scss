@@ -50,6 +50,8 @@
       width: 100cqi;
       height: cqmin;
       object-fit: contain;
+      border-radius: 2vw;
+      box-shadow: 0 2vw 4vw rgba(0, 0, 0, 0.1);
     }
   }
   @supports (contain: layout) {
