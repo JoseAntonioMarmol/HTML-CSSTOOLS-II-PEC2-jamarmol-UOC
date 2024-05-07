@@ -10,7 +10,12 @@
         "**/*.scss"
     ],
     "rules": {
-        "selector-class-pattern": "^.[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$",
+        "selector-class-pattern": [
+            "^.[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$",
+            {
+                "message": "Selector should be written in lowercase with hyphens and double underscores for BEM"
+            }
+        ],
         "selector-id-pattern": "^$",
         "unit-allowed-list": [
             "vw",
@@ -21,6 +26,11 @@
             "px",
             "rem"
         ],
+        "declaration-block-single-line-max-declarations": 1,
+        "length-zero-no-unit": true,
+        "color-function-notation": "modern",
+        "color-hex-length": "short",
+        "selector-attribute-quotes": "always",
         "media-feature-name-value-allowed-list": {
             "orientation": "portrait"
         }
