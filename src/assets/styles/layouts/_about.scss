@@ -7,7 +7,19 @@
       margin-block: auto;
       max-width: 90vw;
     }
-
+    &__container {
+      .about__section:first-of-type {
+          .about__text::first-letter {
+                  @supports (initial-letter: 3) or (-webkit-initial-letter: 3) {
+                      -webkit-initial-letter: 3;
+                      initial-letter: 3;
+                      color: $primary;
+                      font-weight: bold;
+                      margin-right: 0.5em;
+                  }
+          }
+      }
+  }
     &__title {
       font-size: calc(1em + 1vw);
       line-height: 1em;
@@ -15,6 +27,7 @@
     }
 
     &__text { text-align: justify; }
+
     &__list {
       background-color: $list-group-bg;
       border-width: $list-group-border-width;
@@ -39,7 +52,6 @@
       object-fit: contain;
     }
   }
-
   @supports (contain: layout) {
     @container about (min-width: 994px) {
       .about__container { width: 65cqw; }
