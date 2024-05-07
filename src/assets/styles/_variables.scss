@@ -11,15 +11,24 @@ $uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
 
 $mqMinWidth: 420px;
 
-$theme-colors: (
-  "primary": #12372A,
-  "secondary": #436850,
-  "tertiary": #ADBC9F,
-  "background":#FBFADA,
-  "success": #28a745,
-  "info": #17a2b8,
-  "warning": #ffc107,
-  "danger": #dc3545,
-  "light": #f8f9fa,
-  "dark": #343a40,
-);
+$primary: #12372A;
+$secondary: #436850;
+$tertiary: #ADBC9F;
+$background: #FBFADA;
+$success: #28a745;
+$danger: #dc3545;
+$warning: #ffc107;
+$info: #029b85;
+$light: #f8f9fa;
+$dark: #343a40;
+$bg-color-primary: color.scale($primary, $lightness: 85%);
+$subtitle-color: color.adjust(#000, $lightness: 70%);
+$link-hover-color: color.adjust($secondary, $blackness: 80%);
+$navbar-light-color: $secondary;
+$navbar-light-toggler-border-color: $bg-color-primary;
+$card-title-color: $secondary;
+$list-group-bg: $bg-color-primary;
+$list-group-border-width: 0;
+$primary-p3: oklch(88.28% 0.1131 177.88deg);
+$secondary-p3: oklch(61.57% 0.1131 177.88deg / 82.45%);
+$bg-color-primary-p3: oklch(88.28% 0.1131 177.88deg / 23.45%);

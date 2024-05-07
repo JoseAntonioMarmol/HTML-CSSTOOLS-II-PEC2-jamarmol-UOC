@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     height: 30vh;
-    color: map-get($theme-colors , secondary );
+    color: $secondary;
 
     &__spacer {
       margin-inline: 25cqi;
@@ -13,21 +13,21 @@
     }
 
 
-    &__container {
-      container: container / size;
+    &__section {
+      container: section / size;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
       min-height: 50cqb;
 
-    //   &--uoc {
-    //     justify-content: space-between;
-    //     color: #fff;
-    //     background-color: $uoc-corporate;
-    //   }
+      &--pers {
+        justify-content: space-between;
+        color: $uoc-corporate;
+        background-color: $uoc-bg;
+      }
 
-    //   &:first-child { justify-content: center; }
+      &:first-child { justify-content: center; }
     }
 
     &__column {
@@ -38,16 +38,16 @@
         width: 30cqi;
       }
 
-    //   &:has(.footer__imatge) {
-    //     margin-inline: 2cqw;
-    //     width: 30cqi;
-    //   }
+      &:has(.footer__image) {
+        margin-inline: 2cqw;
+        width: 30cqi;
+      }
 
-    //   &:has(.footer__credits) {
-    //     margin-right: 3cqw;
-    //     margin-left: 0;
-    //     width: 70cqi;
-    //   }
+      &:has(.footer__text) {
+        margin-right: 3cqw;
+        margin-left: 0;
+        width: 70cqi;
+      }
     }
 
     &__list {
@@ -60,10 +60,10 @@
 
     &__link {
       font-weight: bold;
-      color: map-get($theme-colors , secondary );
+      color: $secondary;
       text-decoration: none;
 
-      &:hover { color: map-get($theme-colors , tertiary ); }
+      &:hover { color: $link-hover-color }
     }
 
     &__logo {
@@ -71,18 +71,18 @@
       height: 60px;
     }
 
-    // &__imatge {
-    //   width: 20cqw;
-    //   height: 100%;
-    //   object-fit: contain;
-    // }
+    &__image {
+      width: 20cqw;
+      height: 100%;
+      object-fit: contain;
+    }
 
-    // &__credits {
-    //   font-weight: bold;
-    //   font-size: 0.7em;
-    //   line-height: 1em;
-    //   text-align: justify;
-    // }
+    &__text {
+      font-weight: bold;
+      font-size: 0.7em;
+      line-height: 1em;
+      text-align: justify;
+    }
   }
 
   @container footer (min-width: 994px) {
@@ -102,9 +102,9 @@
     }
   }
 
-//   @container container (max-height: 125px) {
-//     .footer__imatge {
-//       margin-block-end: 15cqb;
-//       width: 15cqw;
-//     }
-//   }
+  @container section (max-height: 125px) {
+    .footer__image {
+      margin-block-end: 15cqb;
+      width: 15cqw;
+    }
+  }

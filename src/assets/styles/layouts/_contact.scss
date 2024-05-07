@@ -54,7 +54,7 @@
 
   @layer design {
     .contact {
-      color: map-get($theme-colors, tertiary ) !important;
-      background-color: map-get($theme-colors, primary ) !important;
+      color: $secondary-p3 !important;
+      background-color: $bg-color-primary-p3 !important;
     }
   }

@@ -5,24 +5,27 @@
       container: container_about / inline-size;
       margin-inline: 0;
       margin-block: auto;
-      max-width: 75vw;
+      max-width: 90vw;
     }
 
     &__title {
       font-size: calc(1em + 1vw);
       line-height: 1em;
-      color: map-get($theme-colors , primary );
+      color: $primary;
     }
 
     &__text { text-align: justify; }
-
+    &__list {
+      background-color: $list-group-bg;
+      border-width: $list-group-border-width;
+  }
     &__section:first-child {
       display: flex;
       flex-direction: row;
       gap: 5cqi;
     }
 
-    &__section:has(.about__title) { border-left: 2px solid map-get($theme-colors , primary ); }
+    &__section:has(.about__title) { border-left: 2px solid $primary; }
 
     :is(&__section, &__list) {
       margin-block: 1rem;
@@ -39,7 +42,7 @@
 
   @supports (contain: layout) {
     @container about (min-width: 994px) {
-      .about__container { width: 50cqw; }
+      .about__container { width: 65cqw; }
     }
 
     @container about (min-width: 738px) and (max-width: 993px) {
@@ -47,7 +50,7 @@
     }
 
     @container about (max-width: 737px) {
-      .about__container         { width: 90cqw; }
+      .about__container         { width: 95cqw; }
       .about__section:first-child { flex-direction: column; }
     }
   }
